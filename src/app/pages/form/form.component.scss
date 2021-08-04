@@ -1,0 +1,6 @@
+.ng-invalid.ng-touched {
+border-color: red;
+}
+.ng-invalid:focus{
+    border-color: rgb(16, 190, 59) !important;
+}

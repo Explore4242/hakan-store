@@ -1,0 +1,30 @@
+<nb-card>
+ <div class="row">
+     <div class="container">
+         <div class="profil">
+             <div class="container d-flex justify-content-center pt-4">
+                 <img class= "avatar" src="assets\images\jack.png" alt="">
+             </div>
+            <div class="">
+                <h5 class="title tada mt-4">
+                    {{authService.user?.username}} 
+                     <button class="container" nbButton>Biyografi Ekle</button><hr> 
+                </h5>
+              <div>
+                  <button class="ml-2" nbButton>Gönderiler</button>
+                  <button class="ml-2" nbButton>Hakında</button>
+                  <nb-select class="ml-2" placeholder="Select Showcase">
+                    <nb-option value="">Arkadaşlar</nb-option>
+                    <nb-option value="0">Fotoğraflar</nb-option>
+                    <nb-option value="1">Hikaye Arşivi</nb-option>
+                    <nb-option value="2">Videolar</nb-option>
+
+                  </nb-select>
+              </div>
+               
+                
+            </div>
+         </div>
+     </div>
+ </div>
+</nb-card>

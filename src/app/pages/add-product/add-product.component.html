@@ -1,0 +1,33 @@
+
+<nb-card>
+  <nb-card-header>
+      Ürün Ekle
+  </nb-card-header>
+
+      <nb-card-body [formGroup]="form">
+
+        <div class="my-5">
+          <input type="text" nbInput fullWidth placeholder="Fotoğraf" formControlName="image" shape="round">
+
+        </div>
+        <div class="my-5">
+          <input type="text" nbInput fullWidth placeholder="Başlık" formControlName="title" shape="round">
+
+        </div>
+        <div class="my-5">
+          <input type="text" nbInput fullWidth placeholder="içerik" formControlName="content" shape="round">
+
+        </div>
+
+        <div class="my-5">
+          <input type="text" nbInput fullWidth placeholder="slug" formControlName="slug" shape="round">
+
+        </div>
+        <div class="float-right">
+          <button type="submit" (click)="postProduct()" status="success" nbButton>
+            Ürünü Kaydet
+          </button>
+        </div>
+      </nb-card-body>
+
+</nb-card>

@@ -1,0 +1,33 @@
+<nb-card>
+  <nb-card-header>
+    Ürünler
+    <button nbButton class="float-right" (click)="addProduct()">Yeni Ürün Ekle</button>
+  </nb-card-header>
+
+  <div class="input-group mb-3 my-3">
+    <input type="text" class="form-control"
+     placeholder="Ürün Ara" aria-label="Recipient's username" 
+     aria-describedby="basic-addon2"
+     [(ngModel)]="filterText"
+     >
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button">Ara</button>
+    </div>
+  </div>
+
+  <div class="container row">
+    <div class="col-sm-12">
+      <div class="row pl-2" *ngIf="authService.isAuthentication()">
+        <div class="card"   class="col-3 mx-2 my-2 shadow"  *ngFor="let product of products | product:filterText" style="width: 16rem;">
+          <img class="card-img-top" src="assets/images/1.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text">Some quick example of the card.
+              content.</p>
+            <a class="btn btn-primary" (click)="addToShop(product)">Sepete Ekle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nb-card>

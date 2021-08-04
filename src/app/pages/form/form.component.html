@@ -1,0 +1,104 @@
+<nb-card>
+    <nb-card-header style="background-color: blanchedalmond;">
+        Kişisel Bilgiler - Personal Details
+    </nb-card-header>
+    <nb-card-body>
+        <div>
+            <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                <form [formGroup]="form">
+
+                    <div class="form-group">
+                        <label>İsim Soyad - Name Surname *</label>
+                        <input type="text" class="form-control w-75 float-right" formControlName="name" shape="round">
+                    </div>
+
+        
+                    <div class="form-group">
+                        <label>E-mail *</label>
+                        <input type="email" class="form-control w-75 float-right" formControlName="mail" shape="round">
+                    </div>
+
+        
+        
+                    <div class="form-group">
+                        <label>Cinsiyet - Gender *</label>
+                        <select class="form-control form-select-sm w-75 float-right" formControlName="gender" aria-label=".form-select-sm example">
+                            <option selected>Belirtmek İstemiyorum</option>
+                            <option value="Erkek">Erkek</option>
+                            <option value="Kadın">Kadın</option>
+                   
+                          </select>
+   
+                    </div>
+
+ 
+                    <hr>
+        
+                    <div style="background-color: blanchedalmond; font-size:medium;height: 45px; margin-left: 10px;">
+                        <h6 class="pl-2 pt-2">Kurumsal Bilgiler - Corporate Details</h6>
+                    </div>
+
+                    <div>
+
+                        <div class="form-group">
+                            <label>Kurum Adı / Firma - Company *</label>
+                            <input type="text" class="form-control w-75 float-right" formControlName="companyName" shape="round">
+                        </div>
+
+              
+        
+                        <div class="form-group">
+                            <label>Görev / Unvan - Title *</label>
+                            <input type="text" class="form-control w-75 float-right" formControlName="title" shape="round">
+                        </div>
+                   
+
+                        <div class="form-group">
+                            <label>Adres - Address *</label>
+                            <input type="text" class="form-control w-75 float-right" formControlName="address" shape="round">
+                        </div>
+                    </div>
+           
+                    <div class="form-group">
+                        <label>Katılım Tipi - Participation Type *</label>
+  
+                        <select class="form-control form-select-sm w-75 float-right" formControlName="participationType" aria-label=".form-select-sm example">
+                            <option selected>Öğrenci</option>
+                            <option value="Erkek">Mühendis</option>
+                            <option value="Kadın">Doktor</option>
+                            <option value="Erkek">Şöför</option>
+                            <option value="Kadın">Pilot</option>
+                            <option value="Erkek">Astronot</option>
+                          </select>
+                   
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Telefon - Phone *</label>
+                        <input type="text" class="form-control w-75 float-right"
+                         formControlName="phone" 
+                         [imask]="{mask: ' (500)000 00 00'}" placeholder="(5xx) xxx xx xx" 
+                         shape="round">
+                      
+                    </div>
+
+                    <div class="form-group">
+                        <label>Departman - Department *</label>
+                        <input type="text" class="form-control w-75 float-right" formControlName="department" shape="round">
+
+                    </div>
+         
+                    <div class="form-group">
+                        <label>Bizi nerden duydunuz? How did
+                            <br> you hear about us? *</label>
+                        <textarea type="text" class="form-control w-75 float-right" formControlName="aboutUs" shape="round"></textarea>
+                    </div>
+        
+                    <button type="submit" (click)="postForm()" class="btn btn-secondary  btn-lg btn-block">Bigileri Kaydet</button>
+                
+                </form>
+            </div>
+        </div>
+     
+    </nb-card-body>
+</nb-card>

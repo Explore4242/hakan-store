@@ -1,0 +1,87 @@
+<nb-card>
+    <nb-card-header>
+        Kayıt Ol
+    </nb-card-header>
+    <nb-card-body class="col-6 container" [formGroup]="form">
+     
+        <div class="my-3">
+            <input type="text" nbInput fullWidth placeholder="Adın" formControlName="firstName" shape="round">
+            <ng-container *ngIf="(firstname?.dirty || firstname?.touched)">
+                <div *ngIf="firstname?.errors?.required" style="color:brown">
+                    Bu Alan Zorunlu.
+                </div>
+            </ng-container>
+
+        </div>
+        <div class="my-3">
+            <input type="text" nbInput fullWidth placeholder="Soyadın" formControlName="lastName" shape="round">
+            <ng-container *ngIf="(lastname?.dirty || lastname?.touched)">
+                <div *ngIf="lastname?.errors?.required" style="color:brown">
+                    Bu Alan Zorunlu.
+                </div>
+            </ng-container>
+        </div>
+        <input nbInput placeholder="Doğum Tarihi" fullWidth shape="round" formControlName="date"
+            [nbDatepicker]="dateTimePicker">
+        <nb-datepicker #dateTimePicker></nb-datepicker>
+        <ng-container *ngIf="(date?.dirty || date?.touched)">
+            <div *ngIf="date?.errors?.required" style="color:brown">
+                Doğum Tarihi Girin!
+            </div>
+        </ng-container>
+        <div class="my-3">
+            <input type="text" nbInput fullWidth placeholder="Kullanıcı Adı" formControlName="username" shape="round">
+            <ng-container *ngIf="(user?.dirty || user?.touched)">
+                <div *ngIf="user?.errors?.required" style="color:brown">
+                    Bu Alan Zorunlu.
+                </div>
+
+            </ng-container>
+        </div>
+        <div class="my-3">
+            <input type="email" nbInput fullWidth placeholder="E-posta" formControlName="email" shape="round">
+            <ng-container *ngIf="(email?.dirty || email?.touched)">
+                <div *ngIf="email?.errors?.required" style="color:brown">
+                    Bu Alan Zorunlu
+                </div>
+                <div *ngIf="email?.errors?.email" style="color:brown">
+                    Geçersiz Email.
+                </div>
+            </ng-container>
+        </div>
+
+
+
+        <div class="my-3">
+            <nb-select placeholder="Ülke Seç" formControlName="phoneCountry" status="success">
+                <nb-option [value]="country.id" *ngFor="let country of countries">{{country.name}}</nb-option>
+              </nb-select>
+            <input type="tel"  [imask]="{mask: ' (500)000 00 00'}" nbInput placeholder="(5xx) xxx xx xx" formControlName="phone" shape="round">
+        </div>
+
+        <div class="my-3">
+            <input type="password" nbInput fullWidth placeholder="Şifre" formControlName="password" shape="round">
+            <ng-container *ngIf="(password?.dirty || password?.touched)">
+                <div *ngIf="password?.errors?.required" style="color:brown">
+                    Bir Şifre Girin.
+                </div>
+
+            </ng-container>
+        </div>
+        <div class="my-3">
+            <input type="password" nbInput fullWidth placeholder="Onayla" formControlName="password" shape="round">
+            <ng-container *ngIf="(onayla?.dirty || onayla?.touched)">
+                <div *ngIf="onayla?.errors?.required" style="color:brown">
+                    Şifreyi Onayla.
+                </div>
+            </ng-container>
+        </div>
+        <div class="float-right">
+            <button type="submit" (click)="register()" status="success" nbButton>
+
+                <nb-icon icon="person-outline"> </nb-icon> Kayıt Ol
+            </button>
+        </div>
+    </nb-card-body>
+</nb-card>
+

@@ -1,0 +1,7 @@
+input:invalid {
+	border: 1px solid #CB000F;
+	color: red
+}
+.ng-invalid:focus{
+    border-color: rgb(16, 190, 59) !important;
+}
