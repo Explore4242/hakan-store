@@ -9,9 +9,13 @@ import { Component } from "@angular/core";
   <nb-layout windowMode>
       <nb-layout-header fixed >
         <div style="width: 100%;">
-          <ngx-navbar></ngx-navbar>
+        <nb-sidebar class="menu-sidebar d-md-none" tag="menu-sidebar" responsive start>
+        <ng-content select="nb-menu"></ng-content>
+      </nb-sidebar>
+      <!-- <ngx-header class="d-md-none"></ngx-header> -->
+
+          <ngx-navbar ></ngx-navbar>
       </div>
-        <!-- <ngx-header></ngx-header> -->
       </nb-layout-header>
       
       <nb-layout-column>

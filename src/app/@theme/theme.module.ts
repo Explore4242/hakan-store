@@ -78,7 +78,7 @@ const PIPES = [
 ];
 
 @NgModule({
-  imports: [CommonModule, MatRippleModule, ...NB_MODULES,NbIconModule,NbEvaIconsModule,RouterModule],
+  imports: [CommonModule, MatRippleModule, ...NB_MODULES,NbIconModule,NbEvaIconsModule,RouterModule,NbContextMenuModule],
   exports: [CommonModule, MatRippleModule, ...PIPES, ...COMPONENTS],
   declarations: [...COMPONENTS, ...PIPES, NavbarComponent],
 })

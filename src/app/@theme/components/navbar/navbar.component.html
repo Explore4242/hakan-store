@@ -1,9 +1,28 @@
 
 <div class="row pt-3">
-  <div class="col-3">
-    <h5>Phone</h5>
+  <div class="col-1  d-md-none ">
+    <div class="header-container">
+      <div class="logo-container">
+        <a
+          href="#"
+          class="sidebar-toggle"
+          matRipple
+          [matRippleUnbounded]="false"
+          [matRippleCentered]="false"
+          (click)="toggleSidebar()"
+        >
+          <nb-icon [icon]="(materialTheme$ | async) ? 'menu-outline' : 'menu-2-outline'"></nb-icon>
+        </a>
+        <a class="logo" href="#" (click)="navigateHome()"><span></span></a>
+      </div>
+    
+    
+    </div>
   </div>
-  <div class="col-5">
+  <div class="col-4 col-sm-3">
+    <h5 class="col">Phone</h5>
+  </div>
+  <div class="link col-5 d-none d-md-block">
     <ul class="d-flex justify-content-center">
       <li><a [routerLink]="['anasayfa']" routerLinkActive="active">Anasayfa</a></li>
       <li><a [routerLink]="['kategori']" routerLinkActive="active">Kategoriler</a></li>
@@ -11,7 +30,7 @@
       <li><a [routerLink]="['iletisim']" routerLinkActive="active">İletişim</a></li>
     </ul>
   </div>
-  <div class="col-4">
+  <div class="col-7 col-sm-4">
     <div class="iconlar">
       <nb-icon class="icon" (click)="mapLogin()" icon="person-outline"></nb-icon>
       <nb-icon class="icon" icon="search-outline"></nb-icon>

@@ -3,20 +3,20 @@
     font-size: 40px;
     margin-top: -10px;
 }
-.row .col-5 ul{
+.row .link ul{
     list-style: none;
 }
-.row .col-5 ul li{
+.row .link ul li{
     margin-right: 40px;
 }
 
-.row .col-5 ul li a{
+.row .link ul li a{
     text-decoration: none;
     cursor: pointer;
     font-weight: bolder;
     font-size: larger;
 }
-.row .col-5 ul li a:hover{
+.row .link ul li a:hover{
    color: rgb(240, 108, 245);
 }
 .icon{
@@ -34,6 +34,10 @@
 .iconlar{
     text-align: center;
 }
-.iconlar nb-icon{
+.iconlar .icon{
     margin-right: 13px;
+}
+
+.row .col-1 nb-icon{
+    color: #889ace;
 }
