@@ -9,6 +9,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ShopComponent } from './shop/shop.component';
 import { FormComponent } from './form/form.component';
 import { ProfilComponent } from '../profil/profil.component';
+import { CategoryComponent } from './category/category.component';
 
 
 
@@ -17,7 +18,7 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [
     {
-      path: 'dashboard',
+      path: 'anasayfa',
       component: DashboardComponent,
     },
     {
@@ -35,6 +36,18 @@ const routes: Routes = [{
     {
       path: 'shop',
       component: ShopComponent
+    },
+    {
+      path:'kategori',
+      component: CategoryComponent
+    },
+    {
+      path:'blok',
+      component: CategoryComponent
+    },
+    {
+      path:'iletisim',
+      component: CategoryComponent
     },
     {
       path: 'form',

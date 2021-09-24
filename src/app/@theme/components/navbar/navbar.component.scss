@@ -1,3 +1,39 @@
-.navbarlist ul{
+.row .col-3 h5{
+    text-align: center;
+    font-size: 40px;
+    margin-top: -10px;
+}
+.row .col-5 ul{
     list-style: none;
+}
+.row .col-5 ul li{
+    margin-right: 40px;
+}
+
+.row .col-5 ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: larger;
+}
+.row .col-5 ul li a:hover{
+   color: rgb(240, 108, 245);
+}
+.icon{
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 1px;
+}
+.icon:hover{
+    color: rgb(240, 108, 245);
+    cursor: pointer;
+    border-color: blueviolet;
+}
+
+.iconlar{
+    text-align: center;
+}
+.iconlar nb-icon{
+    margin-right: 13px;
 }

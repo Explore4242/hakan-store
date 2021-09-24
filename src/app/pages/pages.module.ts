@@ -18,6 +18,8 @@ import {IMaskModule} from 'angular-imask';
 import { CategoryComponent } from './category/category.component';
 import { FormComponent } from './form/form.component';
 import { ProfilemoduleModule } from '../profil/profilemodule/profilemodule.module';
+import { ContactComponent } from './contact/contact.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 
@@ -50,6 +52,8 @@ import { ProfilemoduleModule } from '../profil/profilemodule/profilemodule.modul
     ShopComponent,
     CategoryComponent,
     FormComponent,
+    ContactComponent,
+    BlogComponent,
     
 
     
