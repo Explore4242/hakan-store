@@ -6,12 +6,13 @@ import { Component } from '@angular/core';
   template: `
     <nb-layout windowMode>
       <nb-layout-header fixed>
-        <ngx-header></ngx-header>
+        <!-- <ngx-header></ngx-header> -->
+        <ngx-navbar></ngx-navbar>
       </nb-layout-header>
 
-      <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive start>
+      <!-- <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive start>
         <ng-content select="nb-menu"></ng-content>
-      </nb-sidebar>
+      </nb-sidebar> -->
 
       <nb-layout-column>
         <ng-content select="router-outlet"></ng-content>
