@@ -20,6 +20,7 @@ import { FormComponent } from './form/form.component';
 import { ProfilemoduleModule } from '../profil/profilemodule/profilemodule.module';
 import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -54,6 +55,7 @@ import { BlogComponent } from './blog/blog.component';
     FormComponent,
     ContactComponent,
     BlogComponent,
+    AboutComponent,
     
 
     

@@ -1,3 +1,7 @@
+@import '~bootstrap/scss/mixins/breakpoints';
+ @import '~@nebular/theme/styles/global/breakpoints';
+ @import '../../styles/themes';
+
 .row .col-3 h5{
     text-align: center;
     font-size: 40px;
@@ -32,7 +36,7 @@
 }
 
 .iconlar{
-    text-align: center;
+    text-align: right;
 }
 .iconlar .icon{
     margin-right: 13px;
@@ -40,4 +44,20 @@
 
 .row .col-1 nb-icon{
     color: #889ace;
+}
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+
+    .sidebar-toggle {
+      @include nb-ltr(margin-right, 1.25rem);
+      @include nb-rtl(margin-left, 1.25rem);
+      text-decoration: none;
+      color: nb-theme(text-hint-color);
+      nb-icon {
+        font-size: 1.75rem;
+      }
+    }
 }

@@ -10,6 +10,8 @@ import { ShopComponent } from './shop/shop.component';
 import { FormComponent } from './form/form.component';
 import { ProfilComponent } from '../profil/profil.component';
 import { CategoryComponent } from './category/category.component';
+import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 
@@ -43,11 +45,15 @@ const routes: Routes = [{
     },
     {
       path:'blok',
-      component: CategoryComponent
+      component: BlogComponent
     },
     {
       path:'iletisim',
       component: CategoryComponent
+    },
+    {
+      path:'hakimizda',
+      component: AboutComponent
     },
     {
       path: 'form',
