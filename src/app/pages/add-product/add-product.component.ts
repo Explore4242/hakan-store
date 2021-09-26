@@ -24,8 +24,7 @@ export class AddProductComponent implements OnInit {
       image: [,Validators.required],
       title: [,Validators.required],
       content: [,Validators.required],
-      slug: [,Validators.required],
-
+      price: [,Validators.required],
     })
   }
 

@@ -47,10 +47,13 @@ export class LoginComponent implements OnInit {
       this.authService.getUser().subscribe((usr)=>{
         this.authService.user = usr;
 ;      })
-      this.router.navigate(['auth', 'welcome']);
+      this.router.navigate(['pages', 'dashboard']);
     })
   }
 
+  mapRegister() {
+    this.router.navigate(['pages', 'register']);
+  }
 
 }
 

@@ -4,16 +4,16 @@
       <h2><b>Store.</b> En sevdiğiniz ürünleri<br>satın almanın en iyi yolu.</h2>
     </div>
   </div>
-  <div class="row d-sm-3 col-3" *ngFor="let item of products">
-    <div class="carts d-flex container">
-      <div class="cart">
-        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-card-13-mac-nav-202108?wid=200&hei=130&fmt=png-alpha&.v=1625783380000" alt="">
-        <div class="cart-body">
-          <a href="#">{{item.title}}</a><br>
+  <div class="row d-sm-3 col-3">
+    <div class="carts d-flex ">
+      <div class="cart container"  *ngFor="let item of products">
+        <img src="{{item.image}}">
+        <div class="cart-body">                                           
+          <p>{{item.title}}</p><br>
           <p> {{item.price | currency: '₺'}}</p>
+          <a class="btn btn-primary">Sepete Ekle</a>
         </div>
       </div>
-  
     </div>
 
   </div>

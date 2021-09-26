@@ -5,6 +5,6 @@
  */
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3000',
-  formApi:'https://guest-card-service.kerzz.com:6700'
+  apiUrl: 'https://fakestoreapi.com',
+  formApi:''
 };

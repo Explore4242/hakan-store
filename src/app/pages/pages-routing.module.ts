@@ -12,6 +12,7 @@ import { ProfilComponent } from '../profil/profil.component';
 import { CategoryComponent } from './category/category.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -49,7 +50,7 @@ const routes: Routes = [{
     },
     {
       path:'iletisim',
-      component: CategoryComponent
+      component: ContactComponent
     },
     {
       path:'hakimizda',
