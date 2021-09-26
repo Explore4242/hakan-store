@@ -1,0 +1,38 @@
+.menu{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 550px;
+    background-color: rgb(236 236 235 / 49%);
+}
+.container h2{
+    padding-top: 74px;
+    padding-left: 100px;
+    font-size: xx-large;
+    color:#8a8c8c;
+    b{
+        color:black;
+    }
+}
+.cart img{
+    width:120px;
+}
+.cart .cart-body{
+    text-align: center;
+    padding-top: 20px;
+}
+.cart .cart-body a{
+    color:black;
+    text-decoration: none;
+}
+.carts{
+    padding-top: 89px;
+    padding-left: 90px;
+    padding-right: 86px;
+}
+.carts .cart{
+    margin-right: 51px;
+}
+span {
+    content: "\20BA";
+  }

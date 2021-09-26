@@ -15,9 +15,9 @@ export class ProductService {
   apiUrl = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
-  product(): Observable<any> {
+  product(): Observable<Product[]> {
     const token: string | null = 'Bearer ' + localStorage.getItem('access_token');
-    return this.http.get(this.apiUrl + '/products', { headers: { authorization: token } })
+    return this.http.get<Product[]>(this.apiUrl + '/products', { headers: { authorization: token } })
     .pipe(
       tap(data=>console.log()),
       catchError(this.handleError)

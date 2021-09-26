@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
   template: `
     
   
-  <nb-layout windowMode>
+  <nb-layout windowMode >
    
   
   <nb-layout-header fixed >
@@ -23,7 +23,7 @@ import { Component } from "@angular/core";
       <!-- <ngx-header class="d-md-none"></ngx-header> -->
 
       
-      <nb-layout-column>
+      <nb-layout-column style="padding: 0 !important;">
         <ng-content select="router-outlet"></ng-content>
       </nb-layout-column> 
     </nb-layout>
