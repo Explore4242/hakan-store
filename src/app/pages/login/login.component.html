@@ -4,10 +4,10 @@
     </nb-card-header>
     <nb-card-body class="col-6 container" [formGroup]="form" >
         <div class="my-3">
-            <input type="email" nbInput fullWidth placeholder="Email" shape="round" formControlName="username">
+            <input type="text" nbInput fullWidth placeholder="Kullanıcı Adı" shape="round" formControlName="username">
         </div>
         <div class="my-3">
-            <input type="password" nbInput fullWidth placeholder="Password" shape="round" formControlName="password">
+            <input type="password" nbInput fullWidth placeholder="Şifre" shape="round" formControlName="password">
         </div>
         <div>
             <button type="submit" status="success" nbButton (click)="login()">

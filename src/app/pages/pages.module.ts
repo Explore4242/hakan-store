@@ -14,7 +14,6 @@ import { ProductService } from './services/product.service';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ShopComponent } from './shop/shop.component';
 
-import {IMaskModule} from 'angular-imask';
 import { CategoryComponent } from './category/category.component';
 import { FormComponent } from './form/form.component';
 import { ProfilemoduleModule } from '../profil/profilemodule/profilemodule.module';
@@ -41,7 +40,6 @@ import { AboutComponent } from './about/about.component';
     NbDatepickerModule,
     NbCardModule,
     NbSelectModule,
-    IMaskModule,
     ProfilemoduleModule,
     NbCardModule
 

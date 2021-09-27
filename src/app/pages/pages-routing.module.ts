@@ -67,7 +67,7 @@ const routes: Routes = [{
     
     {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'anasayfa',
       pathMatch: 'full',
     },
   ],

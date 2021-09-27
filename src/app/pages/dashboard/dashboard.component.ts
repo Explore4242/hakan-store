@@ -35,7 +35,6 @@ export class DashboardComponent implements OnInit {
 
   adToShop(item: Product) {
     this.shopService.add(item)
-    console.log(this.shopService.products)
   }
 
   addProduct(){

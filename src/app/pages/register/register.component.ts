@@ -14,11 +14,11 @@ export class RegisterComponent implements OnInit {
 
   
 form:FormGroup;
-countries: Phone[]=[
-  {id:'+90', name:'Türkiye'},
-  {id:'+12', name:'Azerbaycan'},
-  {id:'+88', name:'Türkmenistan'}
-];
+// countries: Phone[]=[
+//   {id:'+90', name:'Türkiye'},
+//   {id:'+12', name:'Azerbaycan'},
+//   {id:'+88', name:'Türkmenistan'}
+// ];
   constructor(private authService: AuthService,
               private router: Router,
               private fb:FormBuilder) {
@@ -27,14 +27,12 @@ countries: Phone[]=[
   }
   initForm() {
     this.form = this.fb.group({
-      date: [null,[Validators.required]],
       username:  [null,[Validators.required,]],
       email:  [null,[Validators.required,Validators.email]],
       password:  [null,[Validators.required]],
       firstName:  [null,[Validators.required]],
       lastName:  [null,[Validators.required]],
       phone:  [null,[Validators.required]],
-      phoneCountry:  ['+90',[Validators.required]],
     })
   }
 

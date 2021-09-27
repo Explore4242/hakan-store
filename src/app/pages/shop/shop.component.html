@@ -8,6 +8,7 @@
       <thead class="thead-dark">
         <tr>
           <th>#</th>
+          <th></th>
           <th>Ürün adı</th>
           <th>Fiyat</th>
           <th>Miktar</th>
@@ -19,7 +20,12 @@
       <tbody>
         <tr *ngFor="let item of products;let i=index">
           <td scope="row">{{i+1}}</td>
-          <td>{{item.product.title}}</td>
+          <td><img src="{{item.product.image}}" style="width:150px;height:100px; object-fit: contain;">  </td>
+          <td ><div style="text-align: center;">
+            <p>
+              {{item.product.title}}
+            </p>
+          </div></td>
           <td>{{item.product.price | currency }}</td>
           <td><button nbButton ghost [disbled]="item.quantity < 2" (click)="changeQuantity(item.product.title,false)"><a><strong style="color: crimson; font-size:large;">-</strong></a></button>
             <span class="mx-1">
@@ -28,8 +34,9 @@
             <button nbButton ghost (click)="changeQuantity(item.product.title,true)"><a><strong style="color: chartreuse; font-size:large;">+</strong></a></button>
           </td>
           <td>{{item.quantity * item.product.price | currency}}</td>
+
           <td>
-            {{item.product.content}}
+            <button nbButton>Satın Al</button>
           </td>
           <td>
             <button nbButton ghost status="danger" (click)="itemDelete(item.product.title)"><nb-icon icon="trash-outline"></nb-icon></button>

@@ -19,7 +19,6 @@ export class ShopService {
 
   add(product: Product) {
     this.products = this.getProduct() ?? [];
-    product.price = Math.random() * 100;
     const item: BasketItem = this.products.find(el => el.product.title == product.title)
     if (item) {
       item.quantity++;
@@ -55,7 +54,5 @@ export class ShopService {
   saveProducts() {
     localStorage.setItem('basket', JSON.stringify(this.products));
   }
-
-  
 
 }

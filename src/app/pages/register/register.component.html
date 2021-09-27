@@ -21,14 +21,14 @@
                 </div>
             </ng-container>
         </div>
-        <input nbInput placeholder="Doğum Tarihi" fullWidth shape="round" formControlName="date"
+        <!-- <input nbInput placeholder="Doğum Tarihi" fullWidth shape="round" formControlName="date"
             [nbDatepicker]="dateTimePicker">
         <nb-datepicker #dateTimePicker></nb-datepicker>
         <ng-container *ngIf="(date?.dirty || date?.touched)">
             <div *ngIf="date?.errors?.required" style="color:brown">
                 Doğum Tarihi Girin!
             </div>
-        </ng-container>
+        </ng-container> -->
         <div class="my-3">
             <input type="text" nbInput fullWidth placeholder="Kullanıcı Adı" formControlName="username" shape="round">
             <ng-container *ngIf="(user?.dirty || user?.touched)">
@@ -52,12 +52,12 @@
 
 
 
-        <div class="my-3">
+        <!-- <div class="my-3">
             <nb-select placeholder="Ülke Seç" formControlName="phoneCountry" status="success">
                 <nb-option [value]="country.id" *ngFor="let country of countries">{{country.name}}</nb-option>
               </nb-select>
-            <input type="tel"  [imask]="{mask: ' (500)000 00 00'}" nbInput placeholder="(5xx) xxx xx xx" formControlName="phone" shape="round">
-        </div>
+            <input type="tel" nbInput placeholder="(5xx) xxx xx xx" formControlName="phone" shape="round">
+        </div> -->
 
         <div class="my-3">
             <input type="password" nbInput fullWidth placeholder="Şifre" formControlName="password" shape="round">
@@ -78,7 +78,6 @@
         </div>
         <div class="float-right">
             <button type="submit" (click)="register()" status="success" nbButton>
-
                 <nb-icon icon="person-outline"> </nb-icon> Kayıt Ol
             </button>
         </div>

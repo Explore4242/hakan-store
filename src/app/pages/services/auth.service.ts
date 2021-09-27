@@ -11,19 +11,19 @@ import { User } from '../model/user.model';
   providedIn: 'root'
 })
 export class AuthService {
-  user: any;
+  user: User;
   apiUrl = environment.apiUrl;
   formApi = environment.formApi;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   register(user: User | any): Observable<any> {
-    return this.http.post(this.apiUrl + "/user", user);
+    return this.http.post(this.apiUrl + '/users', user);
     
   }
 
   login(user: any) {
-    return this.http.post(this.apiUrl + '/login', user);
+    return this.http.get(this.apiUrl + '/users', user);
     
   }
 
@@ -38,7 +38,7 @@ export class AuthService {
 
   getUser():Observable<any>{
     const token: string | null = 'Bearer ' + localStorage.getItem('access_token');
-    return this.http.get(this.apiUrl + '/user-info', { headers: { authorization: token } });
+    return this.http.get(this.apiUrl + '/users', { headers: { authorization: token } });
   }
 
   postForm(form:Form):Observable<any>{

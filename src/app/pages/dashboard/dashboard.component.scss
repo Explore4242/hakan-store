@@ -19,13 +19,14 @@
 }
 
 .card {
-
     align-items: center;
-    padding-top: 84px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 5px 0px #524b49;
+    // padding-top: 84px;
     & img {
         padding-top: 14px;
         width: 10rem;
-        height: 9rem;
+        height: 150px;
     }
     h5{
         padding:10px;
@@ -36,7 +37,4 @@
     }
 
 
-}
-.aa{
-    justify-content: center;
 }

@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
-import { IMaskModule } from 'angular-imask';
 
 import {
   NbChatModule,
@@ -46,7 +45,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
     NbChatModule.forRoot({
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
-    IMaskModule,
     CoreModule.forRoot(),
 
 

@@ -1,10 +1,21 @@
 
 export interface User {
-    id?: number;
-    date:string;
-    username: string;
-    email: string;
-    password: string;
-    firstName: string;
-    lastName: string;
+    email:string;
+    username:string;
+    password:string;
+    name:{
+        firstname:string;
+        lastname:string;
+      },
+    address:{
+        city:string;
+        street:string;
+        number: string;
+        zipcode:number
+        geolocation:{
+            lat:number;
+            long:number;
+        }
+    },
+    phone:number;
 }

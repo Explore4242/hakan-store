@@ -33,6 +33,20 @@
   </div>
   <div class="col">
     <div class="iconlar">
+      <!-- <nb-action
+      class="user-action"
+      *nbIsGranted="['view', 'user']"
+      matRipple
+      [matRippleUnbounded]="true"
+      [matRippleCentered]="true">
+      <nb-user *ngIf="authService.isAuthentication()" [nbContextMenu]="userMenu"
+               [onlyPicture]="userPictureOnly"
+               [name]="authService.user?.username"
+               [picture]="user?.picture"
+               nbContextMenuTag="mainMenu" >
+      </nb-user>
+      
+    </nb-action> -->
       <nb-icon class="icon" (click)="mapLogin()" icon="person-outline"></nb-icon>
       <nb-icon class="icon" icon="search-outline"></nb-icon>
       <nb-icon class="icon" (click)="mapBasket()" icon="shopping-cart-outline"></nb-icon>

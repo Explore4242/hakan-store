@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
@@ -19,10 +19,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.intForm();
   }
+
   intForm() {
     this.form = this.fb.group({
-      username: [],
-      password: [],
+      username: [,Validators.required],
+      password: [,Validators.required],
       remember_me: false
     })
   }
@@ -42,12 +43,12 @@ export class LoginComponent implements OnInit {
       // res['accces_token']
 
       Object.keys(res).forEach(key => {
-        localStorage.setItem(key, res[key]);
+        localStorage.setItem(key,JSON.stringify(res[key]));
       })
       this.authService.getUser().subscribe((usr)=>{
         this.authService.user = usr;
 ;      })
-      this.router.navigate(['pages', 'dashboard']);
+      this.router.navigate(['pages', 'anasayfa']);
     })
   }
 
