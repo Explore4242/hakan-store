@@ -24,11 +24,11 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit():void{
-    this.getProduct();
+    this.getLimitProduct();
   }
 
-  getProduct() {
-    this.productService.product().subscribe(res=>{
+  getLimitProduct() {
+    this.productService.productLimit().subscribe(res=>{
       this.products=res;
     })
   }

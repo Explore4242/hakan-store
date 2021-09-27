@@ -1,37 +1,42 @@
-.menu{
-    margin:0;
-    padding:0;
+.menu {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 550px;
     background-color: rgb(236 236 235 / 49%);
 }
-.container h2{
+.container h2 {
     padding-top: 74px;
-    padding-left: 100px;
+    padding-left: 131px;
     font-size: xx-large;
-    color:#8a8c8c;
-    b{
-        color:black;
+    color: #8a8c8c;
+    b {
+        color: black;
     }
 }
-.cart img{
-    width:120px;
+.aa{
+    padding-top: 74px;
 }
-.cart .cart-body{
-    text-align: center;
-    padding-top: 20px;
+
+.card {
+
+    align-items: center;
+    padding-top: 84px;
+    & img {
+        padding-top: 14px;
+        width: 10rem;
+        height: 9rem;
+    }
+    h5{
+        padding:10px;
+          max-width: 230px;
+        overflow: hidden; /* taşanları gizle */
+        white-space: nowrap; /* alt satıra hiç inme */
+        text-overflow: ellipsis;
+    }
+
+
 }
-.cart .cart-body a{
-    color:black;
-    text-decoration: none;
+.aa{
+    justify-content: center;
 }
-.carts{
-    padding-top: 89px;
-    padding-left: 300px;
-}
-.carts .cart{
-    margin-right: 51px;
-}
-span {
-    content: "\20BA";
-  }

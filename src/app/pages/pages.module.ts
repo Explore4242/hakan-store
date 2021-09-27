@@ -42,7 +42,8 @@ import { AboutComponent } from './about/about.component';
     NbCardModule,
     NbSelectModule,
     IMaskModule,
-    ProfilemoduleModule
+    ProfilemoduleModule,
+    NbCardModule
 
 ],
   declarations: [

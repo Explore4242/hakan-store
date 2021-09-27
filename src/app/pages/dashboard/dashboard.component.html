@@ -4,17 +4,15 @@
       <h2><b>Store.</b> En sevdiğiniz ürünleri<br>satın almanın en iyi yolu.</h2>
     </div>
   </div>
-  <div class="row d-sm-3 col-3">
-    <div class="carts d-flex ">
-      <div class="cart container"  *ngFor="let item of products">
-        <img src="{{item.image}}">
-        <div class="cart-body">                                           
-          <p>{{item.title}}</p><br>
-          <p> {{item.price | currency: '₺'}}</p>
-          <a class="btn btn-primary">Sepete Ekle</a>
-        </div>
+  <div class="row col aa">
+    <div class="card d-flex justify-content-center mx-3" style="width: 249px;height: 287px;" *ngFor="let product of products">
+      <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+      <div class="card-body" class="pb-3">
+          <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">{{product.price | currency: "₺  "}}</p>
       </div>
+      <button style="margin-bottom: 0px;" nbButton fullWidth status="success">Sepete Ekle</button>
     </div>
-
   </div>
 </div>
+

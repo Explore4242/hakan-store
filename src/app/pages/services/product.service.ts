@@ -23,17 +23,26 @@ export class ProductService {
       catchError(this.handleError)
     );
   }
-  handleError(err: HttpErrorResponse) {
-     let errorMessage:string = "";
-    if(err.error instanceof ErrorEvent) {
-      errorMessage = "Bir hata oluştu"+err.error.message;
-    }else{
-      errorMessage = "Sistemsel Bir Hata Oluştu"
-    }
-    return throwError(errorMessage);
-  }
-
+  
   postProduct(products:Product|any):Observable<any>{
     return this.http.post<Product>(this.apiUrl+'/products',products);
   }
+
+  productLimit(): Observable<Product[]> {
+    const token: string | null = 'Bearer ' + localStorage.getItem('access_token');
+    return this.http.get<Product[]>(this.apiUrl + '/products/category/electronics?limit=4', { headers: { authorization: token } })
+    .pipe(tap(data=>console.log()),
+    catchError(this.handleError));
+  }
+
+  handleError(err: HttpErrorResponse) {
+    let errorMessage:string = "";
+   if(err.error instanceof ErrorEvent) {
+     errorMessage = "Bir hata oluştu"+err.error.message;
+   }else{
+     errorMessage = "Sistemsel Bir Hata Oluştu"
+   }
+   return throwError(errorMessage);
+ }
+
 }
