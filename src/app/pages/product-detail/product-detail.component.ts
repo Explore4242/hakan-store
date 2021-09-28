@@ -12,7 +12,6 @@ import { ShopService } from '../services/shop.service';
 export class ProductDetailComponent implements OnInit {
 
   productDetail: Product;
-
   products:Product[];
   constructor(private productService: ProductService,
               private shopService:ShopService,
@@ -22,6 +21,7 @@ export class ProductDetailComponent implements OnInit {
     const id = route.snapshot.paramMap.get('id');
     console.log(id);
      productService.getProductById(id).subscribe(el => this.productDetail = el);
+     productService.productLimit().subscribe(res=>this.products=res);
   }
 
   ngOnInit(): void {
@@ -53,4 +53,5 @@ export class ProductDetailComponent implements OnInit {
   addProduct(){
     return this.router.navigateByUrl("pages/addproduct");
   }
+ 
 }

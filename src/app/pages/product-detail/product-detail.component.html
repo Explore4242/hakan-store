@@ -32,7 +32,7 @@
 
             <p class="lead">
               <span class="mr-1">
-                ₺<del>{{productDetail?.price-productDetail?.price*0.01}}</del>
+                ₺<del>{{productDetail?.price+10}}</del>
               </span>
               <span>{{productDetail?.price | currency: "₺"}}</span>
             </p>
@@ -83,9 +83,9 @@
       <div class="row wow fadeIn">
 
         <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
+        <div class="col-lg-4 col-md-12 mb-4" *ngFor="let product of products">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
+          <img src="{{product.image}}" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
