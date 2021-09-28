@@ -14,7 +14,7 @@ export class ShopService {
   }
 
   getProduct(): BasketItem[] {
-    return JSON.parse(localStorage.getItem('basket'))
+    return JSON.parse(localStorage.getItem('basket'));
   }
 
   add(product: Product) {

@@ -20,6 +20,7 @@ import { ProfilemoduleModule } from '../profil/profilemodule/profilemodule.modul
 import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -55,6 +56,7 @@ import { AboutComponent } from './about/about.component';
     ContactComponent,
     BlogComponent,
     AboutComponent,
+    ProductDetailComponent,
     
 
     

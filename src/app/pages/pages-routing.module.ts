@@ -13,6 +13,7 @@ import { CategoryComponent } from './category/category.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -55,6 +56,10 @@ const routes: Routes = [{
     {
       path:'hakimizda',
       component: AboutComponent
+    },
+    { 
+      path: 'product/:id',
+      component: ProductDetailComponent
     },
     {
       path: 'form',

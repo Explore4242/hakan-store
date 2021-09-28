@@ -1,0 +1,6 @@
+#title{
+    max-width: 230px;
+    overflow: hidden; /* taşanları gizle */
+    white-space: nowrap; /* alt satıra hiç inme */
+    text-overflow: ellipsis;
+}
