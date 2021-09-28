@@ -1,170 +1,194 @@
-<p >
-    {{productDetail?.title}}
-</p>
-<ng-container *ngIf="!productDetail">
-    Geliyor...
-</ng-container>
+<main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
 
-<!--Section: Block Content-->
-<section class="mb-5">
+      <!--Grid row-->
+      <div class="row wow fadeIn">
 
-    <div class="row">
-      <div class="col-md-6 mb-4 mb-md-0">
-  
-        <div id="mdb-lightbox-ui"></div>
-  
-        <div class="mdb-lightbox">
-  
-          <div class="row product-gallery mx-1">
-  
-            <div class="col-12 mb-0">
-              <figure class="view overlay rounded z-depth-1 main-img">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
-                  data-size="710x823">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
-                    class="img-fluid z-depth-1">
-                </a>
-              </figure>
-              <figure class="view overlay rounded z-depth-1" style="visibility: hidden;">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
-                  data-size="710x823">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
-                    class="img-fluid z-depth-1">
-                </a>
-              </figure>
-              <figure class="view overlay rounded z-depth-1" style="visibility: hidden;">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg"
-                  data-size="710x823">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg"
-                    class="img-fluid z-depth-1">
-                </a>
-              </figure>
-              <figure class="view overlay rounded z-depth-1" style="visibility: hidden;">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg"
-                  data-size="710x823">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg"
-                    class="img-fluid z-depth-1">
-                </a>
-              </figure>
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+
+          <img style src="{{productDetail?.image}}" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+
+          <!--Content-->
+          <div class="p-4">
+
+            <div class="mb-3">
+              <a href="">
+                <span class="badge purple mr-1">{{productDetail?.category}}</span>
+              </a>
+              <a href="">
+                <span class="badge blue mr-1">Yeni</span>
+              </a>
+              <a href="">
+                <span class="badge red mr-1">En çok satan ürünler</span>
+              </a>
             </div>
-            <div class="col-12">
-              <div class="row">
-                <div class="col-3">
-                  <div class="view overlay rounded z-depth-1 gallery-item">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
-                      class="img-fluid">
-                    <div class="mask rgba-white-slight"></div>
-                  </div>
-                </div>
-                <!-- <div class="col-3">
-                  <div class="view overlay rounded z-depth-1 gallery-item">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg"
-                      class="img-fluid">
-                    <div class="mask rgba-white-slight"></div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="view overlay rounded z-depth-1 gallery-item">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg"
-                      class="img-fluid">
-                    <div class="mask rgba-white-slight"></div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="view overlay rounded z-depth-1 gallery-item">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15a.jpg"
-                      class="img-fluid">
-                    <div class="mask rgba-white-slight"></div>
-                  </div>
-                </div> -->
-              </div>
-            </div>
+
+            <p class="lead">
+              <span class="mr-1">
+                ₺<del>{{productDetail?.price-productDetail?.price*0.01}}</del>
+              </span>
+              <span>{{productDetail?.price | currency: "₺"}}</span>
+            </p>
+
+            <p class="lead font-weight-bold">{{productDetail?.title}}</p>
+
+            <p>{{productDetail?.description}}</p>
+
+            <form class="d-flex justify-content-left">
+              <!-- Default input -->
+              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+              <button class="btn btn-primary btn-md my-0 p" type="button" (click)="adToShop(productDetail)" >Sepete Ekle
+                <i class="fas fa-shopping-cart ml-1"></i>
+              </button>
+
+            </form>
+
           </div>
-  
+          <!--Content-->
+
         </div>
-  
+        <!--Grid column-->
+
       </div>
-      <div class="col-md-6">
-  
-        <h5 id="title">{{productDetail?.title}}</h5>
-        <p class="mb-2 text-muted text-uppercase small">Shirts</p>
-        <ul class="rating">
-          <li>
-            <i class="fas fa-star fa-sm text-primary"></i>
-          </li>
-          <li>
-            <i class="fas fa-star fa-sm text-primary"></i>
-          </li>
-          <li>
-            <i class="fas fa-star fa-sm text-primary"></i>
-          </li>
-          <li>
-            <i class="fas fa-star fa-sm text-primary"></i>
-          </li>
-          <li>
-            <i class="far fa-star fa-sm text-primary"></i>
-          </li>
-        </ul>
-        <p><span class="mr-1"><strong>{{productDetail?.price}}</strong></span></p>
-        <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit
-          error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio,
-          officia quis dolore quos sapiente tempore alias.</p>
-        <div class="table-responsive">
-          <table class="table table-sm table-borderless mb-0">
-            <tbody>
-              <tr>
-                <th class="pl-0 w-25" scope="row"><strong>{{productDetail?.description}}</strong></th>
-              </tr>
-            </tbody>
-          </table>
+      <!--Grid row-->
+
+      <hr>
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-md-6 text-center">
+
+          <h4 class="my-4 h4">Additional information</h4>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit
+            voluptates,
+            quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+
         </div>
-        <hr>
-        <div class="table-responsive mb-2">
-          <table class="table table-sm table-borderless">
-            <tbody>
-              <tr>
-                <td class="pl-0 pb-0 w-25">Quantity</td>
-                <td class="pb-0">Select size</td>
-              </tr>
-              <tr>
-                <td class="pl-0">
-                  <div class="def-number-input number-input safari_only mb-0">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                      class="minus"></button>
-                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                      class="plus"></button>
-                  </div>
-                </td>
-                <td>
-                  <div class="mt-1">
-                    <div class="form-check form-check-inline pl-0">
-                      <input type="radio" class="form-check-input" id="small" name="materialExampleRadios"
-                        checked>
-                      <label class="form-check-label small text-uppercase card-link-secondary"
-                        for="small">Small</label>
-                    </div>
-                    <div class="form-check form-check-inline pl-0">
-                      <input type="radio" class="form-check-input" id="medium" name="materialExampleRadios">
-                      <label class="form-check-label small text-uppercase card-link-secondary"
-                        for="medium">Medium</label>
-                    </div>
-                    <div class="form-check form-check-inline pl-0">
-                      <input type="radio" class="form-check-input" id="large" name="materialExampleRadios">
-                      <label class="form-check-label small text-uppercase card-link-secondary"
-                        for="large">Large</label>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <button type="button" class="btn btn-primary btn-md mr-1 mb-2">Buy now</button>
-        <button type="button" class="btn btn-light btn-md mr-1 mb-2"><i
-            class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+        <!--Grid column-->
+
       </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
     </div>
-  
-  </section>
-  <!--Section: Block Content-->
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank"
+        role="button">Download MDB
+        <i class="fas fa-download ml-2"></i>
+      </a>
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start
+        free tutorial
+        <i class="fas fa-graduation-cap ml-2"></i>
+      </a>
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a href="https://twitter.com/MDBootstrap" target="_blank">
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+        <i class="fab fa-youtube mr-3"></i>
+      </a>
+
+      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+        <i class="fab fa-google-plus-g mr-3"></i>
+      </a>
+
+      <a href="https://dribbble.com/mdbootstrap" target="_blank">
+        <i class="fab fa-dribbble mr-3"></i>
+      </a>
+
+      <a href="https://pinterest.com/mdbootstrap" target="_blank">
+        <i class="fab fa-pinterest mr-3"></i>
+      </a>
+
+      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+        <i class="fab fa-github mr-3"></i>
+      </a>
+
+      <a href="http://codepen.io/mdbootstrap/" target="_blank">
+        <i class="fab fa-codepen mr-3"></i>
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2019 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>

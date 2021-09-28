@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../model/product';
-import { BasketItem } from '../model/shop.model';
 import { ProductService } from '../services/product.service';
+import { ShopService } from '../services/shop.service';
 
 @Component({
   selector: 'ngx-product-detail',
@@ -13,8 +13,12 @@ export class ProductDetailComponent implements OnInit {
 
   productDetail: Product;
 
+  products:Product[];
   constructor(private productService: ProductService,
-    private route: ActivatedRoute) {
+              private shopService:ShopService,
+              private route: ActivatedRoute,
+              private router: Router,)
+             {
     const id = route.snapshot.paramMap.get('id');
     console.log(id);
      productService.getProductById(id).subscribe(el => this.productDetail = el);
@@ -42,4 +46,11 @@ export class ProductDetailComponent implements OnInit {
   // }
 
 
+  adToShop(item: Product) {
+    this.shopService.add(item)
+
+  }
+  addProduct(){
+    return this.router.navigateByUrl("pages/addproduct");
+  }
 }
