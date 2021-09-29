@@ -13,12 +13,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
   link: '/pages/kategori',
   home: true,
 },
-{
-  title: 'blok',
-  icon: 'pie-chart-outline',
-  link: '/pages/blok',
-  home: true,
-},
+// {
+//   title: 'blok',
+//   icon: 'pie-chart-outline',
+//   link: '/pages/blok',
+//   home: true,
+// },
 {
   title: 'İletişim',
   icon: 'phone-outline',

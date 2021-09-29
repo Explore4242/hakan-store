@@ -19,13 +19,20 @@ import { Component } from "@angular/core";
 
         <nb-sidebar class="menu-sidebar d-md-none" tag="menu-sidebar" responsive start>
         <ng-content select="nb-menu"></ng-content>
+        
       </nb-sidebar>
       <!-- <ngx-header class="d-md-none"></ngx-header> -->
 
       
       <nb-layout-column style="padding: 0 !important;">
         <ng-content select="router-outlet"></ng-content>
+        
       </nb-layout-column> 
+  
+      
+      <!-- <nb-layout-footer>
+            <ngx-footer></ngx-footer>
+            </nb-layout-footer> -->
     </nb-layout>
 
 
@@ -44,11 +51,9 @@ import { Component } from "@angular/core";
       <nb-layout-column>
         <ng-content select="router-outlet"></ng-content>
       </nb-layout-column> -->
-    <!-- 
-      <nb-layout-footer fixed>
-        <ngx-footer></ngx-footer>
-      </nb-layout-footer>
-     -->
+   
+     
+    
   `,
 })
 export class OneColumnLayoutComponent { }

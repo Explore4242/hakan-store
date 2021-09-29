@@ -45,10 +45,10 @@ const routes: Routes = [{
       path:'kategori',
       component: CategoryComponent
     },
-    {
-      path:'blok',
-      component: BlogComponent
-    },
+    // {
+    //   path:'blok',
+    //   component: BlogComponent
+    // },
     {
       path:'iletisim',
       component: ContactComponent

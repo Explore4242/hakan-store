@@ -1,17 +1,20 @@
 <div class="menu">
   <div class="row">
+    
+  </div>
+  <div class="row">
     <div class="container">
       <h2><b>Store.</b> En sevdiğiniz ürünleri<br>satın almanın en iyi yolu.</h2>
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="card d-flex mx-3" style="width: 249px;" *ngFor="let product of products">
+    <div class="card d-flex mx-3" style="max-width: 249px;min-width: 10px" *ngFor="let product of products">
       <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
       <div class="card-body" class="pb-3">
           <h5 class="card-title">{{product.title}}</h5>
-        <p class="card-text">{{product.price | currency: "₺  "}}</p>
+        <p class="card-text">{{product.price | currency: "₺"}}</p>
       </div>
-      <button style="margin-bottom: 0px;" (click)="adToShop(product)" nbButton fullWidth status="success">Ürünü İncele</button>
+      <button style="margin-bottom: 0px;" (click)="productDetail(product)" nbButton fullWidth status="success">Ürünü İncele</button>
     </div>
   </div>
 </div>

@@ -33,9 +33,8 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  adToShop(item: Product) {
-    this.shopService.add(item)
-    this.router.navigate(['pages', 'product',item.id])
+  productDetail(item: Product) {
+    this.shopService.add(item);
   }
   addProduct(){
     return this.router.navigateByUrl("pages/addproduct");
