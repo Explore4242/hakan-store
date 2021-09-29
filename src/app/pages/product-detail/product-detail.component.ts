@@ -20,8 +20,11 @@ export class ProductDetailComponent implements OnInit {
              {
     const id = route.snapshot.paramMap.get('id');
     console.log(id);
-     productService.getProductById(id).subscribe(el => this.productDetail = el);
-     productService.productLimit().subscribe(res=>this.products=res);
+    this.refresh(id);
+  }
+  refresh(id: string) {
+    this.productService.getProductById(id).subscribe(el => this.productDetail = el);
+    this.productService.productLimit().subscribe(res=>this.products=res);
   }
 
   ngOnInit(): void {
@@ -47,11 +50,14 @@ export class ProductDetailComponent implements OnInit {
 
 
   adToShop(item: Product) {
-    this.shopService.add(item)
-    this.router.navigate(['pages', 'product',item.id])
+    this.shopService.add(item);
   }
   addProduct(){
     return this.router.navigateByUrl("pages/addproduct");
+  }
+  cartDetail(item: Product){
+    this.refresh(item.id.toString());
+    this.router.navigate(['pages','product',item.id])
   }
  
 }
