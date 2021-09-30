@@ -1,4 +1,50 @@
-<div class="menu">
+
+<main>
+  <div class="row">
+    <h2 class="container alert"><b>Store.</b> En sevdiğiniz ürünleri satın almanın en iyi yolu.</h2>
+  </div>
+  <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+      <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+        
+          <div class="col d-flex">
+              <div class="card h-100 shadow-sm " *ngFor="let product of products"> 
+                <img src="{{product.image}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">Ürün Hakkında</span> <span class="float-end price-hp"></span>{{product.price | currency: "₺"}}</div>
+                      <h5 class="card-title">{{product.title}}</h5>
+                      <div class="text-center my-4">
+                         <button type="button" (click)="productDetail(product)" class="btn btn-warning">Ürün İncele</button>
+                         </div>
+                  </div>
+              </div>
+          </div>
+            
+      </div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="menu">
   <div class="row">
     
   </div>
@@ -18,4 +64,4 @@
     </div>
   </div>
 </div>
-
+ -->
