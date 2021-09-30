@@ -1,111 +1,114 @@
 <main class="mt-5 pt-4">
-    <div class="container dark-grey-text mt-5 ml-0">
+  <div class="container dark-grey-text mt-5 ml-0">
 
-      <!--Grid row-->
-      <div class="row wow fadeIn">
+    <!--Grid row-->
+    <div class="row wow fadeIn">
 
-        <!--Grid column-->
-        <div class="col-md-6 mb-4 ">
+      <!--Grid column-->
+      <div class="col-md-6 mb-4 ">
 
-          <div class="float-right"><img style="max-width: 704px;
+        <div class="float-right"><img style="max-width: 704px;
             height: 394px;" src="{{productDetail?.image}}" class="img-fluid" alt=""></div>
 
-        </div>
-        <!--Grid column-->
+      </div>
+      <!--Grid column-->
 
-        <!--Grid column-->
-        <div class="col-md-6 mb-4">
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
 
-          <!--Content-->
-          <div class="p-4">
+        <!--Content-->
+        <div class="p-4">
 
-            <div class="mb-3">
-              <a href="">
-                <span class="badge purple mr-1">{{productDetail?.category}}</span>
-              </a>
-              <a href="">
-                <span class="badge blue mr-1">Yeni</span>
-              </a>
-              <a href="">
-                <span class="badge red mr-1">En çok satan ürünler</span>
-              </a>
-            </div>
-
-            <p class="lead">
-              <span class="mr-1">
-                ₺<del>{{productDetail?.price+10}}</del>
-              </span>
-              <span>{{productDetail?.price | currency: "₺"}}</span>
-            </p>
-
-            <p class="lead font-weight-bold">{{productDetail?.title}}</p>
-
-            <p>{{productDetail?.description}}</p>
-
-            <form class="d-flex justify-content-left">
-              <!-- Default input -->
-              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-              <button class="btn btn-primary btn-md my-0 p" type="button" (click)="adToShop(productDetail)" >Sepete Ekle
-                <i class="fas fa-shopping-cart ml-1"></i>
-              </button>
-
-            </form>
-
+          <div class="mb-3">
+            <a href="">
+              <span class="badge purple mr-1">{{productDetail?.category}}</span>
+            </a>
+            <a href="">
+              <span class="badge blue mr-1">Yeni</span>
+            </a>
+            <a href="">
+              <span class="badge red mr-1">En çok satan ürünler</span>
+            </a>
           </div>
-          <!--Content-->
+
+          <p class="lead">
+            <span class="mr-1">
+              ₺<del>{{productDetail?.price+10}}</del>
+            </span>
+            <span>{{productDetail?.price | currency: "₺"}}</span>
+          </p>
+
+          <p class="lead font-weight-bold">{{productDetail?.title}}</p>
+
+          <p>{{productDetail?.description}}</p>
+
+          <form class="d-flex justify-content-left">
+            <!-- Default input -->
+              
+            <button class="btn btn-primary btn-md my-0 p" type="button" (click)="adToShop(productDetail)">Sepete Ekle
+              <i class="fas fa-shopping-cart ml-1"></i>
+            </button>
+
+          </form>
 
         </div>
-        <!--Grid column-->
+        <!--Content-->
 
       </div>
-      <!--Grid row-->
+      <!--Grid column-->
 
-      <hr>
+    </div>
+    <!--Grid row-->
 
-      <!--Grid row-->
-      <div class="row d-flex justify-content-center wow fadeIn">
+    <hr>
 
-        <!--Grid column-->
-        <div class="col-md-6 text-center">
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center wow fadeIn">
 
-          <h4 class="my-4 h4">Ek bilgi</h4>
+      <!--Grid column-->
+      <div class="col-md-6 text-center">
 
-          <p>Cep telefonu fiyatları, en ucuz akıllı telefon modelleri, aksesuarlarda efsane indirimler ve kampanyalar Vatan Bilgisayar'da, hemen satın al.
-            Tüketici Elektroniği kategorisinde</p>
-        </div>
-        <!--Grid column-->
+        <h4 class="my-4 h4">Ek bilgi</h4>
 
+        <p>Cep telefonu fiyatları, en ucuz akıllı telefon modelleri, aksesuarlarda efsane indirimler ve kampanyalar
+          Vatan Bilgisayar'da, hemen satın al.
+          Tüketici Elektroniği kategorisinde</p>
       </div>
-      <!--Grid row-->
+      <!--Grid column-->
 
-      <!--Grid row-->
-      <div class="row wow fadeIn justify-content-center my-3">
-        <!--Grid column-->
-        <div class="mx-3 mb-4" *ngFor="let product of products">
-            <img src="{{product.image}}" (click)="cartDetail(product)" style="cursor: pointer; max-width: 200px;max-height:200px;min-width: 200px;min-height:200px;" class="img-column">
-          </div>
-        </div>
-        <!--Grid column-->
+    </div>
+    <!--Grid row-->
 
-       </div>
-      <!--Grid row-->
+    <!--Grid row-->
+    <div class="row wow fadeIn justify-content-center my-3">
+      <!--Grid column-->
+      <div class="mx-3 mb-4" *ngFor="let product of products">
+        <img src="{{product.image}}" (click)="cartDetail(product)"
+          style="cursor: pointer; max-width: 200px;max-height:200px;min-width: 200px;min-height:200px;"
+          class="img-column">
+      </div>
+    </div>
+    <!--Grid column-->
 
-  </main>
-  <!--Main layout-->
+  </div>
+  <!--Grid row-->
 
-  
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Initializations -->
-  <script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
+</main>
+<!--Main layout-->
 
-  </script>
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Initializations -->
+<script type="text/javascript">
+  // Animations initialization
+  new WOW().init();
+
+</script>

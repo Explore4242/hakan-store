@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../model/product';
+import { BasketItem } from '../model/shop.model';
 import { ProductService } from '../services/product.service';
 import { ShopService } from '../services/shop.service';
 
@@ -13,6 +14,8 @@ export class ProductDetailComponent implements OnInit {
 
   productDetail: Product;
   products:Product[];
+  incrsEndDcrs:BasketItem[];
+
   constructor(private productService: ProductService,
               private shopService:ShopService,
               private route: ActivatedRoute,
@@ -58,6 +61,16 @@ export class ProductDetailComponent implements OnInit {
   cartDetail(item: Product){
     this.refresh(item.id.toString());
     this.router.navigate(['pages','product',item.id])
+  }
+  
+  changeQuantity(title:string,isIncrease:boolean) {
+    if(isIncrease) {
+      this.shopService.increase(title);
+    }else{
+      this.shopService.decrease(title);
+    }
+    console.log(this.shopService.products)
+    this.incrsEndDcrs=this.shopService.getProduct();
   }
  
 }
