@@ -25,7 +25,6 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 
 
 
-
 @NgModule({
   imports: [
     PagesRoutingModule,
@@ -42,8 +41,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     NbCardModule,
     NbSelectModule,
     ProfilemoduleModule,
-    NbCardModule
-
+    NbCardModule,
+    
 ],
   declarations: [
     PagesComponent,

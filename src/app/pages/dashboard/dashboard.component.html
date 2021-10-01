@@ -1,67 +1,21 @@
 
-<main>
   <div class="row">
-    <h2 class="container alert"><b>Store.</b> En sevdiğiniz ürünleri satın almanın en iyi yolu.</h2>
+    <h2 class="container alert"><b>Erkek</b> Giyim</h2>
   </div>
-  <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-      <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-        
-          <div class="col d-flex">
-              <div class="card h-100 shadow-sm " *ngFor="let product of products"> 
-                <img src="{{product.image}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">Ürün Hakkında</span> <span class="float-end price-hp"></span>{{product.price | currency: "₺"}}</div>
-                      <h5 class="card-title">{{product.title}}</h5>
-                      <div class="text-center my-4">
-                         <button type="button" (click)="productDetail(product)" class="btn btn-warning">Ürün İncele</button>
-                         </div>
-                  </div>
-              </div>
-          </div>
-            
+
+  <div class="col d-flex flex-wrap justify-content-center ml-2">
+    <div class="card shadow-sm mt-2" *ngFor="let product of products">
+      <img src="{{product.image}}" class="card-img-top">
+      <div class="card-body">
+        <div class="clearfix mb-3"> <span class="float-start badge rounded-pill"
+            style="background-color: #b773398f;">Ürün Hakkında</span> <span
+            class="float-end price-hp"></span>{{product.price | currency: "₺"}}</div>
+        <h5 class="card-title">{{product.title}}</h5>
+        <div class="text-center my-4">
+          <button type="button" (click)="productDetail(product)" class="btn btn-warning">Ürün İncele</button>
+        </div>
       </div>
-  </div>
-</main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="menu">
-  <div class="row">
-    
-  </div>
-  <div class="row">
-    <div class="container">
-      <h2><b>Store.</b> En sevdiğiniz ürünleri<br>satın almanın en iyi yolu.</h2>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div class="card d-flex mx-3" style="max-width: 249px;min-width: 10px" *ngFor="let product of products">
-      <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
-      <div class="card-body" class="pb-3">
-          <h5 class="card-title">{{product.title}}</h5>
-        <p class="card-text">{{product.price | currency: "₺"}}</p>
-      </div>
-      <button style="margin-bottom: 0px;" (click)="productDetail(product)" nbButton fullWidth status="success">Ürünü İncele</button>
-    </div>
-  </div>
-</div>
- -->
+
+

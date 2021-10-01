@@ -30,10 +30,11 @@ export class ProductService {
 
   productLimit(): Observable<Product[]> {
     const token: string | null = 'Bearer ' + localStorage.getItem('access_token');
-    return this.http.get<Product[]>(this.apiUrl + '/products/category/electronics?limit=4', { headers: { authorization: token } })
+    return this.http.get<Product[]>(this.apiUrl + '/products/category/jewelery', { headers: { authorization: token } })
       .pipe(tap(data => console.log()),
         catchError(this.handleError));
   }
+
 
   getProductById(id: string): Observable<Product> {
     const token: string | null = 'Bearer ' + localStorage.getItem('access_token');

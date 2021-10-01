@@ -47,7 +47,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
     }),
     CoreModule.forRoot(),
 
-
   ],
   bootstrap: [AppComponent],
 
