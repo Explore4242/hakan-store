@@ -8,13 +8,7 @@ import { CategoryService } from '../services/category.service';
 })
 export class CategoryComponent implements OnInit {
 
-  categories:string[];
-  constructor(private categoryService: CategoryService) {
-    categoryService.getcategory().subscribe(res=>
-     { 
-        this.categories =res;
-      })
-   }
+  
 
   ngOnInit(): void {
   }

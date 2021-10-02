@@ -14,10 +14,7 @@ import { AuthService } from '../../../pages/services/auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  items = [
-    { title: 'Ana Sayfa',url:['pages', 'login'] },
-    { title: 'Logout',url:['pages', 'login'] },
-  ];
+ 
   private destroy$: Subject<void> = new Subject<void>();
   public readonly materialTheme$: Observable<boolean>;
   userPictureOnly: boolean = false;

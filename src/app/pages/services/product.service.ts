@@ -39,7 +39,14 @@ export class ProductService {
   getProductById(id: string): Observable<Product> {
     const token: string | null = 'Bearer ' + localStorage.getItem('access_token');
     return this.http.get<Product>(this.apiUrl + '/products/' + id, { headers: { authorization: token } })
-      .pipe(tap(data => console.log()),
+      .pipe(tap(console.log),
+        catchError(this.handleError));
+  }
+
+  getProductByCategory(category: string): Observable<Product[]> {
+    const token: string | null = 'Bearer ' + localStorage.getItem('access_token');
+    return this.http.get<Product[]>(this.apiUrl + '/products/category/' + category, { headers: { authorization: token } })
+      .pipe(tap(data => console.log(data)),
         catchError(this.handleError));
   }
 

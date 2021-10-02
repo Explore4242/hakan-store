@@ -1,13 +1,13 @@
-<nb-card>
+<nb-card style="max-width: 100% !important; display:flex;">
     <nb-card-header>
         Giriş yap
     </nb-card-header>
-    <nb-card-body style="max-width: 100% !important;" class="col-6 container" [formGroup]="form" >
+    <nb-card-body style="max-width: 50% !important;" class="col-6 container" [formGroup]="form" >
         <div class="my-3">
-            <input type="text" nbInput fullWidth placeholder="Kullanıcı Adı" shape="round" formControlName="username">
+            <input type="text" nbInput placeholder="Kullanıcı Adı" shape="round" formControlName="username">
         </div>
         <div class="my-3">
-            <input type="password" nbInput fullWidth placeholder="Şifre" shape="round" formControlName="password">
+            <input type="password" nbInput placeholder="Şifre" shape="round" formControlName="password">
         </div>
         <div>
             <button type="submit" status="success" nbButton (click)="login()">

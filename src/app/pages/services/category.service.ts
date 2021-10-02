@@ -12,11 +12,11 @@ export class CategoryService {
   url = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
-  getcategory(): Observable<string[]>{
+  getcategories(): Observable<string[]>{
     const token: string | null = 'Bearer ' + localStorage.getItem('access_token');
-    return this.http.get<string[]>(this.url + '/products/categories', { headers: { authorization: token } })
+    return this.http.get<string[]>(this.url + '/products/categories/', { headers: { authorization: token } })
     .pipe(
-      tap(data=>console.log()),
+      tap(data=>console.log(data)),
       catchError(this.handleError)
     );
   }
