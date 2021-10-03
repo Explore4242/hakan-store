@@ -1,8 +1,8 @@
-<nb-card style="max-width: 100% !important; display:flex;">
+<nb-card style="max-width: 400px; width: 90%;" class="container"> 
     <nb-card-header>
         Giriş yap
     </nb-card-header>
-    <nb-card-body style="max-width: 50% !important;" class="col-6 container" [formGroup]="form" >
+    <nb-card-body [formGroup]="form" >
         <div class="my-3">
             <input type="text" nbInput placeholder="Kullanıcı Adı" shape="round" formControlName="username">
         </div>

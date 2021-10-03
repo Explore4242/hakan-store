@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbButtonModule, NbCardModule, NbDatepicker, NbDatepickerModule, NbIconModule, NbInputModule, NbMenuModule, NbSelectModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbDatepicker, NbDatepickerModule, NbIconModule, NbInputModule, NbMenuModule, NbSelectModule, NbToastrModule } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -42,6 +42,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     NbSelectModule,
     ProfilemoduleModule,
     NbCardModule,
+    NbToastrModule.forRoot()
     
 ],
   declarations: [

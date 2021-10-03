@@ -40,7 +40,6 @@ export class ShopService {
       item.quantity++;
       console.log(this.products)
       this.saveProducts();
-
     }
   }
   decrease(title: string) {

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NbComponentStatus, NbToastrService } from '@nebular/theme';
 import { Product } from '../model/product';
 import { BasketItem } from '../model/shop.model';
 import { ProductService } from '../services/product.service';
@@ -16,15 +17,24 @@ export class ProductDetailComponent implements OnInit {
   products:Product[];
   incrsEndDcrs:BasketItem[];
 
+  private index: number = 0;
+
+  @HostBinding('class')
+  classes = 'example-items-rows';
+
   constructor(private productService: ProductService,
               private shopService:ShopService,
               private route: ActivatedRoute,
-              private router: Router,)
+              private router: Router,
+              private toastrService: NbToastrService)
              {
     const id = route.snapshot.paramMap.get('id');
     console.log(id);
     this.refresh(id);
+  
+    
   }
+  
   refresh(id: string) {
     this.productService.getProductById(id).subscribe(el => this.productDetail = el);
     this.productService.productLimit().subscribe(res=>this.products=res);
@@ -60,7 +70,8 @@ export class ProductDetailComponent implements OnInit {
   }
   cartDetail(item: Product){
     this.refresh(item.id.toString());
-    this.router.navigate(['pages','product',item.id])
+
+    this.router.navigate(['pages','product',item.id]);
   }
   
   changeQuantity(title:string,isIncrease:boolean) {
@@ -72,5 +83,12 @@ export class ProductDetailComponent implements OnInit {
     console.log(this.shopService.products)
     this.incrsEndDcrs=this.shopService.getProduct();
   }
+  showToast(position, status) {
+    this.toastrService.show(
+      status || 'Success',
+      `Sepete eklendi.`,
+      { position, status });
+  }
+  
  
 }

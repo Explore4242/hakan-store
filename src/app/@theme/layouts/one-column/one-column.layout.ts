@@ -24,7 +24,7 @@ import { Component } from "@angular/core";
       <!-- <ngx-header class="d-md-none"></ngx-header> -->
 
       
-      <nb-layout-column style="padding: 0 !important;">
+      <nb-layout-column>
         <ng-content select="router-outlet"></ng-content>
         
       </nb-layout-column> 
