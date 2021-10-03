@@ -2,7 +2,7 @@
     background-color: #fbfbfb;
     padding: 78px;
     border-radius: 10px;
-    
+   
    
 }
 .description{
@@ -11,5 +11,19 @@
     width:547px;
     font-style: italic;
     color: #817f7f;
+  }
+  .icons .fab{
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+    padding: 29px;
+    margin-top: -15px;
+    background-color: #cbc8c8;
+    padding: 18px;
+    width: 50px;
+    margin-right: 7px;
+  }
+  .icons .fab:hover{
+    background-color: #e300ff9e;
+    cursor: pointer;
   }
 }
