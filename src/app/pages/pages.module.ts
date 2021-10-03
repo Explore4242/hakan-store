@@ -23,10 +23,14 @@ import { AboutComponent } from './about/about.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
+import { faSquare as farSquare, faCheckSquare as farCheckSquare, faSquare, faCheckSquare } from '@fortawesome/free-regular-svg-icons';
+import { faStackOverflow, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
   imports: [
+    FontAwesomeModule,
     PagesRoutingModule,
     ThemeModule,
     NbMenuModule,
@@ -67,4 +71,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
   ]
 })
 export class PagesModule {
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faSquare, faCheckSquare, farSquare, farCheckSquare, faStackOverflow, faGithub, faMedium);
+  }
 }

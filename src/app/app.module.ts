@@ -25,12 +25,15 @@ import {
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
-
+import {  FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faSquare as farSquare, faCheckSquare as farCheckSquare, faSquare, faCheckSquare } from '@fortawesome/free-regular-svg-icons';
+import { faStackOverflow, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
   declarations: [AppComponent, WelcomeComponent],
   imports: [
-    BrowserModule, 
+    FontAwesomeModule,
+    BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
@@ -52,4 +55,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 })
 export class AppModule {
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faSquare, faCheckSquare, farSquare, farCheckSquare, faStackOverflow, faGithub, faMedium);
+  }
 }
