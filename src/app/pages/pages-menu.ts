@@ -7,12 +7,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/anasayfa',
     home: true,
   },
-  {
-  title: 'Kategoriler',
-  icon: 'layout-outline',
-  link: '/pages/kategori',
-  home: true,
-},
+//   {
+//   title: 'Kategoriler',
+//   icon: 'layout-outline',
+//   link: '/pages/kategori',
+//   home: true,
+// },
 // {
 //   title: 'blok',
 //   icon: 'pie-chart-outline',

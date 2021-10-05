@@ -1,3 +1,7 @@
+.col{
+  padding-right: 0px !important;
+    padding-left: 0px !important;
+}
 .container .row .alert {
   background-color: #ff750038;
   margin-top: 48px;
@@ -326,11 +330,7 @@ h2 {
   font-weight: 900;
 }
 
-footer {
-  background: #212529;
-  height: 80px;
-  color: #fff;
-}
+
 @media (max-width:670px){
   .container .row button {
     width: 76px;

@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
   <nb-layout windowMode >
    
   
-  <nb-layout-header fixed >
+  <nb-layout-header  >
         <div style="width: 100%;">
         <ngx-navbar ></ngx-navbar>
       </div>

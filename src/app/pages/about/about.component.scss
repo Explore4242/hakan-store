@@ -2,8 +2,6 @@
     background-color: #fbfbfb;
     padding: 78px;
     border-radius: 10px;
-   
-   
 }
 .description{
   margin-left: 45px;
@@ -25,5 +23,94 @@
   .icons .fab:hover{
     background-color: #e300ff9e;
     cursor: pointer;
+  }
+}
+
+@media (max-width:1377px){
+  .container{
+    .about{
+      justify-content:center;
+    }
+}
+}
+@media (max-width:826px){
+  .container{
+    .about{
+      justify-content: space-between;
+      .img img{
+        width: 420px;
+      }
+      .description{
+        margin-left: 0px;
+        margin-top: 58px;
+       p{
+        width: 390px;
+       }
+      }
+    }
+}
+}
+@media (max-width:554px){
+  .container{
+    .about{
+      justify-content: space-between;
+      .img img{
+        width: 227px;
+      }
+      .description{
+        margin-left: 0px;
+        margin-top: 22px;
+        h5{
+          font-size: 19px;
+          font-family: cursive;
+        }
+       p{
+        width: 284px;
+       }
+      }
+    }
+}
+}
+@media (max-width:469px){
+  .container{
+    .about{
+      justify-content: space-between;
+      .img img{
+        width: 265px;
+      }
+      .description{
+        margin-left: 0px;
+        margin-top: 22px;
+        h5{
+          font-size: 19px;
+          font-family: cursive;
+        }
+       p{
+        width: 310px;
+       }
+      }
+    }
+  }
+}
+@media (max-width:375px){
+  .container{
+    
+    .about{
+      justify-content: space-between;
+      .img img{
+        width: 163px;
+      }
+      .description{
+        margin-left: 0px;
+        margin-top: 22px;
+        h5{
+          font-size: 19px;
+          font-family: cursive;
+        }
+       p{
+        width: 203px;
+       }
+      }
+    }
   }
 }
