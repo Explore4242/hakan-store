@@ -38,3 +38,11 @@
   @include nb-overrides();
   @include material-overrides();
 };
+
+
+.nb-theme-default nb-layout > .scrollable-container {
+  background: linear-gradient(183deg,#76076863,#6e91bd) !important;
+}
+.nb-theme-default nb-layout > .scrollable-container > .layout {
+  background: none !important;
+}

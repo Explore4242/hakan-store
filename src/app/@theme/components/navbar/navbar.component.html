@@ -1,23 +1,16 @@
-
 <div class="row pt-3">
 
   <div class="col-1  d-md-none ">
     <div class="header-container">
       <div class="logo-container">
-        <a
-          href="#"
-          class="sidebar-toggle"
-          matRipple
-          [matRippleUnbounded]="false"
-          [matRippleCentered]="false"
-          (click)="toggleSidebar()"
-        >
+        <a href="#" class="sidebar-toggle" matRipple [matRippleUnbounded]="false" [matRippleCentered]="false"
+          (click)="toggleSidebar()">
           <nb-icon [icon]="(materialTheme$ | async) ? 'menu-outline' : 'menu-2-outline'"></nb-icon>
         </a>
         <a class="logo" href="#" (click)="navigateHome()"><span></span></a>
       </div>
-    
-    
+
+
     </div>
   </div>
   <div class="col-4 col-sm-3">
@@ -26,6 +19,12 @@
   <div class="link d-none d-md-block justify-content-center">
     <ul class="d-flex">
       <li><a [routerLink]="['anasayfa']" routerLinkActive="active">Anasayfa</a></li>
+      <li class="dropdown">
+        <span>Kategoriler</span>
+        <div class="dropdown-content">
+          <span type="button" *ngFor="let item of categories" (click)="getProductByCategory(item)">{{item}}</span>
+        </div>
+      </li>
       <li><a [routerLink]="['hakimizda']" routerLinkActive="active">Hakkımızda</a></li>
       <li><a [routerLink]="['iletisim']" routerLinkActive="active">İletişim</a></li>
     </ul>
@@ -50,7 +49,6 @@
       <nb-icon class="icon" icon="search-outline"></nb-icon>
       <nb-icon class="icon" (click)="mapBasket()" icon="shopping-cart-outline"></nb-icon>
     </div>
-    
+
   </div>
 </div>
-   

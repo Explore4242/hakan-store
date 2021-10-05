@@ -1,17 +1,17 @@
-<div class="container">
+<!-- <div class="container">
   
   <div class="row justify-content-center mt-3">
     <div *ngFor="let item of categories">
-      <button class="ml-2" nbButton status="primary" (click)="getProductByCategory(item)">{{item}}</button>
+      <button class="ml-2" style="font-size:9px;" nbButton status="primary" (click)="getProductByCategory(item)">{{item}}</button>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="container">
    <div class="row justify-content-center">
 <div class="row container" style="margin-left: 0px !important; margin-top: 52px;">
-  <div id="card-top" class="col d-flex flex-wrap justify-content-center ml-2 my-4">
-    <div (click)="productDetail(product)" class="card shadow-sm mt-2" *ngFor="let product of products">
+  <div id="card-top" class="col d-flex flex-wrap justify-content-center ml-2">
+    <div (click)="productDetail(product)" class="card shadow-sm mt-2 my-1" *ngFor="let product of products">
       <img src="{{product.image}}" class="card-img-top">
       <div class="card-body">
         <div class="clearfix mb-3">

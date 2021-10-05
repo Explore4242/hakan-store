@@ -1,70 +1,106 @@
-@import '~bootstrap/scss/mixins/breakpoints';
- @import '~@nebular/theme/styles/global/breakpoints';
- @import '../../styles/themes';
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~@nebular/theme/styles/global/breakpoints";
+@import "../../styles/themes";
 
-.row .col-3 h5{
+.row .col-3 h5 {
     text-align: center;
     font-size: 40px;
     margin-top: -10px;
 }
-.row .link ul{
+.row .link ul {
     list-style: none;
 }
-.row .link ul li{
+.row .link ul li {
     margin-right: 40px;
 }
 
-.row .link ul li a{
+.row .link ul li a {
     text-decoration: none;
     cursor: pointer;
     font-weight: bolder;
     font-size: larger;
 }
-.row .link ul li a:hover{
-   color: rgb(240, 108, 245);
+.row .link {
+    ul li > a:hover {
+        color: rgb(240, 108, 245);
+    }
+     
+    .dropdown {
+        font-weight: bolder;
+        font-size: larger;
+        p:hover {
+            color: rgb(240, 108, 245);
+            cursor: pointer;
+        }
+    }
 }
-.icon{
+.icon {
     font-size: 30px;
     border: 2px solid black;
     border-radius: 20px;
     padding: 1px;
 }
-.icon:hover{
+.icon:hover {
     color: rgb(240, 108, 245);
     cursor: pointer;
     border-color: blueviolet;
 }
 
-.iconlar{
+.iconlar {
     text-align: right;
 }
-.iconlar .icon{
+.iconlar .icon {
     margin-right: 13px;
 }
 
-.row .col-1 nb-icon{
+.row .col-1 nb-icon {
     color: #889ace;
 }
 
-  .header-container {
+.header-container {
     display: flex;
     align-items: center;
     width: auto;
 
     .sidebar-toggle {
-      @include nb-ltr(margin-right, 1.25rem);
-      @include nb-rtl(margin-left, 1.25rem);
-      text-decoration: none;
-      color: nb-theme(text-hint-color);
-      nb-icon {
-        font-size: 1.75rem;
-      }
+        @include nb-ltr(margin-right, 1.25rem);
+        @include nb-rtl(margin-left, 1.25rem);
+        text-decoration: none;
+        color: nb-theme(text-hint-color);
+        nb-icon {
+            font-size: 1.75rem;
+        }
     }
 }
-  .logo-container {
+.logo-container {
     display: flex;
     align-items: center;
     width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
-  }
+}
 
-  
+.dropdown {
+    
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9eb;
+    min-width: 200px;
+    text-transform: capitalize;
+    // top: 30px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+
+    span {
+        padding: 5px 10px;
+    }
+}
+.dropdown:focus .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
