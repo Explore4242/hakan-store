@@ -79,7 +79,7 @@
 }
 
 .dropdown {
-    
+    cursor: pointer;
     position: relative;
     display: inline-block;
 }
@@ -93,9 +93,11 @@
     // top: 30px;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
     z-index: 1;
-
     span {
         padding: 5px 10px;
+    }
+    span:hover{
+        color: rgb(240, 108, 245);
     }
 }
 .dropdown:focus .dropdown-content {

@@ -26,6 +26,7 @@ export class DashboardComponent implements OnInit {
     public authService: AuthService,
     private categoryService: CategoryService,
     private acRoute: ActivatedRoute) {
+      
     this.router.events.subscribe(data => {
       if (data instanceof NavigationEnd) {
         this.acRoute.queryParams.subscribe(res => {
