@@ -20,30 +20,73 @@
       <tbody>
         <tr *ngFor="let item of products;let i=index">
           <td scope="row">{{i+1}}</td>
-          <td><img src="{{item?.product?.image}}" style="width:150px;height:100px; object-fit: contain;">  </td>
-          <td ><div style="text-align: center;">
-            <p>
-              {{item?.product?.title}}
-            </p>
-          </div></td>
+          <td><img src="{{item?.product?.image}}" style="width:150px;height:100px; object-fit: contain;"> </td>
+          <td>
+            <div style="text-align: center;">
+              <p>
+                {{item?.product?.title}}
+              </p>
+            </div>
+          </td>
           <td>{{item?.product?.price | currency }}</td>
           <td>
-            <button nbButton ghost [disabled]="item?.quantity < 2" (click)="changeQuantity(item?.product?.title,false)"><a><strong style="color: crimson; font-size:large;">-</strong></a></button>
+            <button nbButton ghost [disabled]="item?.quantity < 2"
+              (click)="changeQuantity(item?.product?.title,false)"><a><strong
+                  style="color: crimson; font-size:large;">-</strong></a></button>
             <span class="mx-1">
               {{item?.quantity}}
             </span>
-            <button nbButton ghost (click)="changeQuantity(item?.product?.title,true)"><a><strong style="color: chartreuse; font-size:large;">+</strong></a></button>
+            <button nbButton ghost (click)="changeQuantity(item?.product?.title,true)"><a><strong
+                  style="color: chartreuse; font-size:large;">+</strong></a></button>
           </td>
-          <td>{{item?.quantity * item?.product?.price | currency}}</td>
-
+          <td>
+            {{item?.quantity * item?.product?.price | currency}}</td>
           <td>
             <button nbButton>Satın Al</button>
           </td>
           <td>
-            <button nbButton ghost status="danger" (click)="itemDelete(item?.product?.title)"><nb-icon icon="trash-outline"></nb-icon></button>
+
+            <button nbButton ghost status="danger" (click)="itemDelete(item?.product?.title)">
+              <nb-icon icon="trash-outline"></nb-icon>
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
   </nb-card-body>
 </nb-card>
+<!-- 
+
+<div class="container">
+  <div class="row mx-1">
+    <div class="kart d-flex flex-wrap justify-content-around mt-2" *ngFor="let item of products;let i=index">
+      <div class="img mx-3">
+       <img src="{{item?.product?.image}}" style="width: 250px;max-height: 100px;
+       object-fit: contain;
+       padding: 30px;"> 
+      </div>
+     <div class="description d-flex flex-wrap" style="align-self: center;">
+
+       <div class="title mx-2" >
+        <p style="font-weight: bolder;width: 81px;overflow: hidden;white-space: nowrap;">{{item?.product?.title}}</p>
+       </div>
+     
+       <div class="incdcrs mx-5">
+        <button nbButton ghost [disabled]="item?.quantity < 2" (click)="changeQuantity(item?.product?.title,false)"><a><strong style="color: crimson; font-size:large;">-</strong></a></button>
+        <span class="mx-1">
+          {{item?.quantity}}
+        </span>
+        <button nbButton ghost (click)="changeQuantity(item?.product?.title,true)"><a><strong style="color: chartreuse; font-size:large;">+</strong></a></button>
+       </div>
+
+       <div class="price ml-5" style="font-weight: bolder;">
+        <p> {{item?.product?.price | currency }}</p>
+       </div>
+       <div class="buy-and-rmv ml-5">
+        <button nbButton>Satın Al</button>
+        <button nbButton ghost status="danger" (click)="itemDelete(item?.product?.title)"><nb-icon icon="trash-outline"></nb-icon></button>
+       </div>
+     </div>
+    </div>
+  </div>
+</div> -->

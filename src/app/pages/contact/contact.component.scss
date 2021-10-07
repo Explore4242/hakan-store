@@ -15,7 +15,7 @@
       margin-top: 85px;
       font-weight: 600;
     }
-    .yazi{
+    .yazi {
       color: #a4aabd !important;
       margin-bottom: 10px;
     }
@@ -38,11 +38,15 @@
 }
 
 form {
-  margin-right: 161px;
   .btn {
-    margin-left: 144px;
-    width: 89% !important;
-    margin-top: 16px;
+    background: #4c494e;
+    width: 1017px;
+    border: none;
+    margin-top: 2px;
+    color:white;
+  }
+  .btn:hover {
+    background: #2c2a2e;
   }
   .inputlar {
     .input input {
@@ -50,86 +54,149 @@ form {
       background: #edeaea;
       border: none;
       height: 37px;
-    }area {
-      width: 500px;
+    }
+    textarea {
+      width: 1017px;
+      height: 233px;
+      margin-inline-start: inherit;
+      margin-top: 12px;
       background: #edeaea;
-      border: none;
-      height: 37px;
     }
   }
 }
-.mesaj textarea{
-  width: 1040px;
-  margin-left: 159px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  height: 285px;
-  background: #edeaea;
-}
 
-@media (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .container {
-    .row .contact .fas{
+    max-width: 1033px;
+    .row .contact .fas {
       margin-right: 97px;
       margin-left: 102px;
+    }
+  }
+  form {
+    .inputlar {
+      flex-direction: column;
+      width: 500px;
+      textarea {
+        max-width: 500px;
+        margin-left: 8px;
+      }
+    }
+    .btn {
+      width: 500px;
+      margin-left: 8px;
+
     }
   }
 }
 @media (max-width: 1024px) {
   .container {
-    .row .contact .fas{
+    .row .contact .fas {
       margin-right: 55px;
       margin-left: 54px;
     }
   }
+  
 }
 @media (max-width: 766px) {
   .container {
-    .row .contact .fas{
+    .row .contact .fas {
       margin-right: 17px;
       margin-left: 33px;
-      
+    }
+  }
+  form {
+    .inputlar {
+      align-items:center;
+      .input input{
+        width: 324px;
+        height: 32px;
+      }
+      flex-direction: column;
+      width: 500px;
+      textarea {
+        max-width: 324px;
+        height:100px;
+        margin-right: 10px;
+      }
+    }
+    .btn {
+      width: 324px;
+      height: 28px;
+      font-size: xx-small;
+      margin-right: 10px;
     }
   }
 }
 @media (max-width: 583px) {
   .container {
     padding: 0px;
+    height:600px;
     .row .contact {
-      .fas{
-         margin-right: 17px;
-      margin-left: 33px;
-      padding:15px;
+      .fas {
+        margin-right: 17px;
+        margin-left: 33px;
+        padding: 15px;
       }
-     p{
-      font-size: smaller;
-      justify-content:center;
-     }
+      p {
+        font-size: smaller;
+        justify-content: center;
+      }
     }
-
   }
 }
 
 @media (max-width: 381px) {
   .container {
     padding: 0px;
-    .row .contact {
-      .fas{
-         margin-right: 17px;
-      margin-left: 33px;
-      padding:6px;
-      }
-     p{
-      font-size: 9px;
-      justify-content:center;
-     }
-    }
+    height: 496px;
 
+    .iconlar{
+      margin-top: -56px;
+    }
+    .row .contact {
+      .fas {
+        margin-right: 17px;
+        margin-left: 33px;
+        padding: 6px;
+      }
+      p {
+        font-size: 9px;
+        justify-content: center;
+      }
+    }
+  }
+  form {
+    
+    .inputlar {
+      align-items:center;
+      label{
+        font-size: 13px;
+      }
+      .input input{
+        width: 231px;
+        height: 27px;
+        font-size: small;
+      }
+      flex-direction: column;
+      width: 235px;
+      textarea {
+        max-width: 231px;
+        height:50px;
+        margin-right: 10px;
+        font-size: small;
+      }
+    }
+    .btn {
+      width: 231px;
+      height: 28px;
+      font-size: xx-small;
+      margin-left: 19px;
+    }
   }
 }
 @media (width: 1330px) {
- .container{
-   display:block;
- }
+  .container {
+    display: block;
+  }
 }
-
