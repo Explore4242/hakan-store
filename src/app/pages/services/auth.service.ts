@@ -22,9 +22,8 @@ export class AuthService {
     
   }
 
-  login(user: any) {
-    return this.http.get(this.apiUrl + '/users', user);
-    
+  login(user: User){
+    return this.http.post<User>(this.apiUrl + '/auth/login', user);
   }
 
   logouth() {

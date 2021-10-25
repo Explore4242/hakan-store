@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
       username: [,Validators.required],
       password: [,Validators.required],
       remember_me: false
+      
     })
   }
   login() {

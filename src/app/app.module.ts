@@ -6,7 +6,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
@@ -28,6 +28,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import {  FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSquare as farSquare, faCheckSquare as farCheckSquare, faSquare, faCheckSquare } from '@fortawesome/free-regular-svg-icons';
 import { faStackOverflow, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
+import { AuthInterceptor } from './pages/services/auth.interceptor';
 
 @NgModule({
   declarations: [AppComponent, WelcomeComponent],
@@ -49,10 +50,15 @@ import { faStackOverflow, faGithub, faMedium } from '@fortawesome/free-brands-sv
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
     CoreModule.forRoot(),
+    
 
   ],
   bootstrap: [AppComponent],
-
+  providers: [
+    { 
+      provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+    }
+  ]
 })
 export class AppModule {
   constructor(private library: FaIconLibrary) {
