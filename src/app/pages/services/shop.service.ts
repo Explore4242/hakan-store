@@ -6,9 +6,8 @@ import { BasketItem } from '../model/shop.model';
   providedIn: 'root'
 })
 export class ShopService {
+
   products: BasketItem[] = [];
-
-
   constructor() {
     this.products = this.getProduct();
   }
